@@ -1,0 +1,30 @@
+import java.util.*;
+class anagaram
+{
+    public static boolean  isanagram( String str1 , String str2)
+    {
+        if(str1.length() != str2.length())
+        {
+            return false ;
+        }
+        char [] ar1 = str1.toCharArray();
+        char [] ar2 = str2.toCharArray() ;   
+        Arrays.sort(ar1);
+        Arrays.sort(ar2);
+        
+        return Arrays.equals(ar1,ar2);
+}
+public static void main(String args[])
+{
+    String str1 = "listen";
+    String str2 = "silent";
+    if(isanagram(str1 , str2))
+    {
+        System.out.println(str1 + " and " + str2 + " are anagrams");
+    }
+    else 
+    {
+        System.out.println(str1 + str2 + "not anagrams");
+    }
+}
+}
